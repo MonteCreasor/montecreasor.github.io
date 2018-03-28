@@ -20,14 +20,6 @@ define('quickstart/app', ['exports', 'quickstart/resolver', 'ember-load-initiali
 
   exports.default = App;
 });
-define('quickstart/components/people-list', ['exports'], function (exports) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = Ember.Component.extend({});
-});
 define('quickstart/components/welcome-page', ['exports', 'ember-welcome-page/components/welcome-page'], function (exports, _welcomePage) {
   'use strict';
 
@@ -217,22 +209,9 @@ define('quickstart/router', ['exports', 'quickstart/config/environment'], functi
 
   Router.map(function () {
     this.route('scientists');
-    this.route('programmers');
   });
 
   exports.default = Router;
-});
-define('quickstart/routes/programmers', ['exports'], function (exports) {
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	exports.default = Ember.Route.extend({
-		model() {
-			return ['Monte', 'Jake'];
-		}
-	});
 });
 define('quickstart/routes/scientists', ['exports'], function (exports) {
   'use strict';
@@ -240,11 +219,7 @@ define('quickstart/routes/scientists', ['exports'], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.Route.extend({
-    model() {
-      return ['Marie Curie', 'Mae Jemison', 'Albert Hofmann'];
-    }
-  });
+  exports.default = Ember.Route.extend({});
 });
 define('quickstart/services/ajax', ['exports', 'ember-ajax/services/ajax'], function (exports, _ajax) {
   'use strict';
@@ -267,29 +242,13 @@ define("quickstart/templates/application", ["exports"], function (exports) {
   });
   exports.default = Ember.HTMLBars.template({ "id": "GukVYCcM", "block": "{\"symbols\":[],\"statements\":[[6,\"h1\"],[7],[0,\"People\"],[8],[0,\"\\n\"],[1,[18,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "quickstart/templates/application.hbs" } });
 });
-define("quickstart/templates/components/people-list", ["exports"], function (exports) {
-  "use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = Ember.HTMLBars.template({ "id": "+lz7+VDn", "block": "{\"symbols\":[\"person\"],\"statements\":[[6,\"h2\"],[7],[1,[18,\"title\"],false],[8],[0,\"\\n\\n\"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[20,[\"people\"]]],null,{\"statements\":[[0,\"    \"],[6,\"li\"],[7],[1,[19,1,[]],false],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "quickstart/templates/components/people-list.hbs" } });
-});
-define("quickstart/templates/programmers", ["exports"], function (exports) {
-  "use strict";
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = Ember.HTMLBars.template({ "id": "MmgeCsd+", "block": "{\"symbols\":[],\"statements\":[[1,[25,\"people-list\",null,[[\"title\",\"people\"],[\"Programmers\",[20,[\"model\"]]]]],false],[0,\"\\n\"],[1,[18,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "quickstart/templates/programmers.hbs" } });
-});
 define("quickstart/templates/scientists", ["exports"], function (exports) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "Vw/xHjXQ", "block": "{\"symbols\":[],\"statements\":[[1,[25,\"people-list\",null,[[\"title\",\"people\"],[\"List of Scientists\",[20,[\"model\"]]]]],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "quickstart/templates/scientists.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "hD+rHte1", "block": "{\"symbols\":[],\"statements\":[[6,\"h2\"],[7],[0,\"Scientists\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "quickstart/templates/scientists.hbs" } });
 });
 
 
@@ -313,6 +272,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("quickstart/app")["default"].create({"name":"quickstart","version":"0.0.0+c7550f63"});
+  require("quickstart/app")["default"].create({"name":"quickstart","version":"0.0.0+34fb38aa"});
 }
 //# sourceMappingURL=quickstart.map
